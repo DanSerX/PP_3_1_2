@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Input form</title>
+    <link href="/static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<h2>User Info</h2>
+<br>
+<form th:action="@{/saveUser}" th:object="${user}">
+    <input type="hidden" th:field="*{id}"/>
+    Name <input type="text" th:field="*{name}"/>
+    <br><br>
+    Surname <input type="text" th:field="*{surname}"/>
+    <br><br>
+    Age <input type="text" th:field="*{age}"/>
+    <br><br>
+    Phone <input type="text" th:field="*{phone}"/>
+    <br><br>
+    Email <input type="text" th:field="*{email}"/>
+    <br><br>
+    <button id="button4" type="submit" class="btn btn-success">Ok</button>
+</form>
+</body>
+</html>

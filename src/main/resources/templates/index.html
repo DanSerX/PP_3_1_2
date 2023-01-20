@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link href="/static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>SecondName</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Operations</th>
+    </tr>
+    <tr th:each="user : ${allUsers}">
+        <td th:utext="${user.name}">name</td>
+        <td th:utext="${user.surname}">surname</td>
+        <td th:utext="${user.age}">age</td>
+        <td th:utext="${user.phone}">phone</td>
+        <td th:utext="${user.email}">email</td>
+        <td>
+            <input id="button1" type="button" value="Update"
+                   th:onclick="'window.location.href = \'' + @{/updateInfo/{id} (id =${user.id})} + '\''"/>
+            <input id="button2" type="button" value="Delete"
+                   th:onclick="'window.location.href = \'' + @{/deleteUser/{id} (id =${user.id})} + '\''"/>
+        </td>
+    </tr>
+</table>
+<br>
+<input id="button3" type="button" value="Add" onclick="window.location.href = 'addNewUser'"/>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(90deg, #d0e4fe 0%, #E8B296 100%);
+}
+h1,h2 {
+    color:orange;
+    margin-left: 20px;
+    font-family: "GOST type A";
+    font-size: 20px;
+}
+table {
+    border: 2px;
+    border-style: dotted;
+    border-color: #7c99bd;
+}
+th, td {
+    border: 1px dashed #D80D0D;
+    padding: 10px;
+}
+#button1, #button2, #button3, #button4 {
+    min-width: 50px;
+    appearance: none;
+    border: 0;
+    border-radius: 15px;
+    background: #7c99bd;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 14px;
+}
